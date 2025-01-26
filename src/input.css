@@ -1,11 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-.menu-btn{
-    @apply text-slate-200 flex flex-col items-center cursor-pointer;
+.menu-btn {
+  @apply text-slate-200 flex flex-col items-center cursor-pointer;
 }
 
-.card{
-    @apply bg-white flex flex-col hover:bg-slate-600 hover:text-slate-200 duration-300 cursor-pointer gap-2 px-4 py-2 w-72 h-80 mx-auto;
+.card {
+  @apply bg-white flex flex-col hover:bg-slate-600 hover:text-slate-200 duration-300 cursor-pointer gap-2 px-4 py-2 w-72 h-80 mx-auto;
+}
+
+@theme {
+  --animate-fade-in: fade-in 500ms;
+  --animate-fade-out: fade-out 500ms;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }

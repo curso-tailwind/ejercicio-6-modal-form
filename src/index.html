@@ -204,13 +204,13 @@
       class="hidden animate-fade-in rounded-md shadow-lg flex-col bg-slate-200 p-10 gap-4 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
     >
       <label for="name">Nombre:</label>
-      <input type="text" id="name" />
+      <input class="bg-white" type="text" id="name" />
       <label for="phone">Teléfono:</label>
-      <input type="tel" id="phone" />
+      <input class="bg-white" type="tel" id="phone" />
       <label for="email">Email:</label>
-      <input type="email" id="email" />
+      <input class="bg-white" type="email" id="email" />
       <label for="address">Dirección:</label>
-      <input type="text" id="address" />
+      <input class="bg-white" type="text" id="address" />
       <div class="flex text-slate-200 pt-6 gap-10 justify-center">
         <button
           id="cancel-btn"
@@ -238,19 +238,24 @@
       subFormElement.classList.replace("hidden", "flex");
       layoutBlurElement.classList.replace("hidden", "block");
       subFormElement.classList.replace("animate-fade-out", "animate-fade-in");
-      layoutBlurElement.classList.replace("animate-fade-out", "animate-fade-in");
+      layoutBlurElement.classList.replace(
+        "animate-fade-out",
+        "animate-fade-in"
+      );
     });
 
     cancelBtnElement.addEventListener("click", (e) => {
       e.preventDefault();
       subFormElement.classList.replace("animate-fade-in", "animate-fade-out");
-      layoutBlurElement.classList.replace("animate-fade-in", "animate-fade-out");
+      layoutBlurElement.classList.replace(
+        "animate-fade-in",
+        "animate-fade-out"
+      );
 
-      setTimeout(()=>{
+      setTimeout(() => {
         subFormElement.classList.replace("flex", "hidden");
         layoutBlurElement.classList.replace("block", "hidden");
-
-      }, 500)
+      }, 400);
     });
   </script>
 </html>
